@@ -1,0 +1,21 @@
+import React from "react";
+import AUTH_IMG from "../../assets/images/auth.img.png";
+
+const AuthLayout = ({ children }) => {
+  return (
+    <div className="flex">
+      {/* Left side (form section) */}
+      <div className="w-screen h-screen md:w-[68vw] px-12 pt-8 pb-12">
+        <h2 className="text-lg font-medium text-black">Task Manager</h2>
+        {children}
+      </div>
+
+      {/* Right side (image section) */}
+      <div className="hidden md:flex w-[40vw] h-screen items-center justify-center bg-blue-50 bg-[url('/bg.img.png')] bg-cover bg-no-repeat bg-center overflow-hidden p-8">
+        <img src={AUTH_IMG} alt="Auth illustration" className="w-64 lg:w-[90%]" />
+      </div>
+    </div>
+  );
+};
+
+export default AuthLayout;
